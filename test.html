@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Editor</title>
+    <link rel="stylesheet" href="test.css">
+</head>
+<body>
+
+    <div class="container">
+        <label for="fileInput" id="input-text">Choose Images</label>
+        <h1>Tool Box</h1>
+        <input type="file" id="fileInput" class="file-input" accept="image/*" multiple>
+        <label for="brightnessSlider" id="brightness-label">Adjust Brightness:</label>
+        <input type="range" id="brightnessSlider" min="0" max="200" value="100">
+        <span id="bright">Brightness: <span id="brightnessValue">100%</span></span>
+        <label for="saturationSlider" id="saturation-label">Adjust Saturation:</label>
+        <input type="range" id="saturationSlider" min="0" max="200" value="100">
+        <span id="saturate">Saturation: <span id="saturationValue">100%</span></span>
+        <label for="contrastSlider" id="contrast-label">Adjust Contrast:</label>
+        <input type="range" id="contrastSlider" min="0" max="200" value="100">
+        <span id="contrast">Contrast: <span id="contrastValue">100%</span></span>
+        <button class="button-33" id="recombtn1">Show Recommendation</button>
+        <button class="button-33" id="recombtn2">Show Recommendation 2</button>
+        <button class="button-33" id="recombtn3">Show Recommendation 3</button>
+        <button class="button-33" id="resetBtn">Reset Image</button>
+        <button id="prevBtn" class="button-33"> &lt; Previous</button>
+        <button id="nextBtn" class="button-33">Next &gt;</button>
+    </div>
+
+    <div class="carousel-container">
+        <div class="carousel">
+            <div class="image-container" id="imageContainer">
+            
+            </div>
+        </div>
+    </div>
+    <div class="search-container">
+        <input type="text" name="search" placeholder="Search..." class="search-input" id="searchInput">
+        <a href="#" class="search-btn" id="searchBtn">
+            <i class="fas fa-search"></i>
+        </a>
+    </div>
+    
+    
+    
+    <script src="test.js"></script>
+</body>
+</html>

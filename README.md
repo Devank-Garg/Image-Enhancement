@@ -17,7 +17,7 @@ Image Editor is a web application that allows you to edit and manipulate images 
 1. Clone the repository to your local machine:
 
    ```
-   [Git Link](https://github.com/Devank-Garg/Image-Enhancement.git)
+   git clone https://github.com/Devank-Garg/Image-Enhancement.git
    ```
 
 2. Open the project folder.

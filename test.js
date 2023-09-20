@@ -71,7 +71,9 @@ function showNextImage() {
 
 function showImage(index) {
     imageContainer.innerHTML = "";
-    imageContainer.appendChild(images[index]);
+
+    const imageDiv = document.createElement('div');
+    imageDiv.classList.add('image-div');
 
     const currentImage = images[index];
     const brightness = brightnessSlider.value;
@@ -81,6 +83,16 @@ function showImage(index) {
 
     brightnessValue.textContent = `${brightness}%`;
     saturationValue.textContent = `${saturation}%`;
+
+    
+    const imageNameElement = document.createElement('p');
+    imageNameElement.textContent = `Image Name: ${currentImage.alt}`;
+
+
+    imageDiv.appendChild(imageNameElement);
+    imageDiv.appendChild(currentImage);
+
+    imageContainer.appendChild(imageDiv);
 }
 
 function handleBrightnessChange() {
@@ -148,6 +160,7 @@ const updateImages = () => {
         if (index !== -1) {
             currentIndex=index
             showImage(currentIndex); 
+            
         }
     }
 };

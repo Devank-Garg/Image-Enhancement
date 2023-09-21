@@ -1,8 +1,9 @@
 body {
     font-family: Arial, sans-serif;   
-    height: 100vh;
+    height: fit-content;
     margin: 0;
     background-image: linear-gradient( 111.4deg,  rgba(238,113,113,1) 1%, rgba(246,215,148,1) 58% );
+    
     /* background-repeat: no-repeat;    */
 }
 h1{
@@ -14,12 +15,24 @@ h1:hover{
     
 
 }
-
-.container {
+.main-container{
+    display: flex;
+}
+.container {    
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    width: fit-content;
+    width: 15%;
+    margin: 30px;
+    background-color:rgba(246, 215, 148, 0.197);
+    padding: 20px;
+    border-radius: 100px;
+}
+.container-2 {    
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 15%;
     margin: 30px;
     background-color:rgba(246, 215, 148, 0.197);
     padding: 20px;
@@ -34,26 +47,37 @@ h1:hover{
     border: 2px solid #f10d0d;
     margin-bottom: 10px;
     background-color: rgb(255, 165, 165);
-    
-    /* transform: translateY(-320px); */
-    width: fit-content;
-    
     padding: 10px 10px;   
+    
+   
+    
 }
 img{
-    width: 1000px;
-    height: 700px;
+    width: 1300px;
+    height: 800px;
 }
+.image-card {
+    
+    overflow: hidden; 
+    position: relative;
+}
+
 .image-card img {
-    width: 1000px !important;
-    height: 700px !important;   
+
+    transition: transform 0.2s ease;
+    transform-origin: center center; 
 }
+
 .carousel-container{
-    margin-left: 400px;
-    margin-top: -800px;
+   
+    margin-left: 3px;
+    margin-top: 90px;
+    
+    width: 65%;
 }
 .image-container{
-    height: 600px;
+    
+    height: 800px;
     width: 1000px;
 }
 .slider-container {
@@ -170,7 +194,9 @@ label {
     transform: scale(1.05) rotate(-1deg);
   }
 
-
+#SwitchBtn{
+    margin-left: 65px;
+}
 
   .image-card {
     
@@ -201,11 +227,12 @@ label {
 
 
 .search-container {
-
+    
     position: fixed;
     top: 0;
     right: 0;
-    background: #fff;
+    
+    background: rgba(238,113,113,1);
     height: 30px;
     width: 180px;
     margin: 20px;
@@ -250,4 +277,13 @@ label {
 
 .search-container:hover{
   animation: hoverShake 0.15s linear 3;
+}
+
+.title{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Tilt Prism', cursive;
+    font-weight: bolder;
+    font-size: larger;
 }
